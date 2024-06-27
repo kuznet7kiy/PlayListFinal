@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PlayList</title>
+		<link rel="icon" href="./PlayListFavicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="PlayListStyles.css" />
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="headerLine" class="logo-and-welcome">
+				<h1>PlayList</h1>
+				<p class="start-info">
+					Welcome to <b>Playlist</b>! <br />
+					This service helps you to manage games you want to play but always
+					forget to! It also helps to track your gaming experience!
+				</p>
+			</div>
+			<div id="userInfo"></div>
+			<div class="input-fields">
+				<input
+					type="text"
+					class="input-ofdata"
+					id="gameToAdd"
+					placeholder="game title"
+				/>
+				<input
+					type="text"
+					class="input-ofdata"
+					id="genresToAdd"
+					placeholder="genres"
+				/>
+				<input
+					type="text"
+					class="input-ofdata"
+					id="priceToAdd"
+					placeholder="price"
+				/>
+				<input
+					type="text"
+					class="input-ofdata"
+					id="serviceToAdd"
+					placeholder="where to buy"
+				/>
+				<input
+					type="text"
+					class="input-ofdata"
+					id="publisherToAdd"
+					placeholder="publisher"
+				/>
+				<button class="add-gameBtn" id="addBtn">Add game</button>
+			</div>
+			<div class="error-message" id="errorMessage" style="display: none">
+				Please fill in all fields correctly!
+			</div>
+			<button class="filter" id="filterBtn">Filter games by...</button>
+			<div id="filterOptions" style="display: none">
+				<button class="filter-option" data-filter="genre">By Genre</button>
+				<button class="filter-option" data-filter="price">By Price</button>
+				<button class="filter-option" data-filter="service">By Service</button>
+				<button class="filter-option" data-filter="publisher">
+					By Publisher
+				</button>
+				<button id="resetFilterBtn" class="reset">❌</button>
+			</div>
+			<table class="gamestable" id="gamesTable">
+				<thead>
+					<tr>
+						<th class="hiddenth"></th>
+						<th>Game title</th>
+						<th>Genres</th>
+						<th>Price($)</th>
+						<th>Service</th>
+						<th>Publisher</th>
+						<th>Added</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- <tr id="gameRow">
+							<td><button class="done-btn">✓</button></td>
+							<td>Assasins Creed</td>
+							<td>RPG|Historical|Action|Stealth</td>
+							<td>70</td>
+							<td>Steam</td>
+							<td>Ubisoft</td>
+							<td>12.4.2023</td>
+						</tr> -->
+				</tbody>
+			</table>
+			<!-- <p class="down-info">
+				This website have been developed by Kuznetsov Artem <br />
+				CVUT fakulta jaderná a fyzikálně inženýrská 2024
+			</p> -->
+		</div>
+	</body>
+</html>
